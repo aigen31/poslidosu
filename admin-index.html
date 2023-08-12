@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./dist/css/main.css">
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__logo">
+            <img src="./dist/img/logo.svg" alt="logo">
+          </div>
+          <div class="header__search">
+            <input type="search" class="form-control" placeholder="Например: Сбермаркет">
+          </div>
+          <div class="header__account">
+            <div class="header__account-inner">
+              <div class="header__account-visible">
+                <div class="header__account-img">
+                  <img src="./dist/img/user-icon.png" alt="avatar" aria-label="presentation">
+                </div>
+                <span class="header__account-text" id="log-in">Войти</span>
+              </div>
+              <div class="header__account-hidden">
+                <a href="#">Войти</a>
+                <a href="#">Зарегистрироваться</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="page-heading">
+      <div class="container">
+        <div class="page-heading__inner">
+          <h1 class="page-heading__title">Панель управления</h1>
+          <p class="page-heading__subtitle">На этой странице можно добавить материал, страницы, и выполнить другие административные действия с сайтом.</p>
+        </div>
+        <hr>
+      </div>
+    </section>
+    <main>
+      <div class="container">
+        <div class="row">
+          <!-- .main start -->
+          <div class="main">
+            <h2 class="section-title">Опубликованные материалы</h2>
+            <!-- filter start -->
+            <div class="admin__filter-wr">
+              <div class="admin__filter">
+                <div class="admin__filter-item">
+                  <label class="admin__filter-checkbox">По дате <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="admin__filter-item">
+                  <input placeholder="ID" type="text" class="admin__filter-input admin__filter-input--id">
+                  <div class="admin__filter-list">
+                    <button class="admin__filter-list-item"><span>1</span></button>
+                    <button class="admin__filter-list-item"><span>2</span></button>
+                    <button class="admin__filter-list-item"><span>3</span></button>
+                  </div>
+                </div>
+                <div class="admin__filter-item">
+                  <input placeholder="Площадка" type="text" class="admin__filter-input admin__filter-input--platform">
+                  <div class="admin__filter-list">
+                    <button class="admin__filter-list-item"><span>Яндекс Директ</span></button>
+                    <button class="admin__filter-list-item"><span>Яндекс Маркет</span></button>
+                    <button class="admin__filter-list-item"><span>Яндекс Драйв</span></button>
+                    <button class="admin__filter-list-item"><span>Яндекс Еда</span></button>
+                  </div>
+                </div>
+                <div class="admin__filter-item">
+                  <input placeholder="Видимость" type="text" class="admin__filter-input admin__filter-input--visibility">
+                  <div class="admin__filter-list">
+                    <button class="admin__filter-list-item"><span>Главная</span></button>
+                    <button class="admin__filter-list-item"><span>Категория</span></button>
+                    <button class="admin__filter-list-item"><span>Магазин</span></button>
+                  </div>
+                </div>
+                <div class="admin__filter-item">
+                  <input placeholder="Тип" type="text" class="admin__filter-input admin__filter-input--type">
+                  <div class="admin__filter-list">
+                    <button class="admin__filter-list-item"><span>Купон</span></button>
+                    <button class="admin__filter-list-item"><span>Категория</span></button>
+                    <button class="admin__filter-list-item"><span>Пользователь</span></button>
+                  </div>
+                </div>
+              </div>
+              <button class="admin__filter-reset">Сбросить фильтры</button>
+            </div>
+            <!-- filter end -->
+            <div class="accordion-wr admin-accordion">
+              <!-- accordion__item start -->
+              <div class="accordion__item entity ">
+                <div class="accordion__head">
+                  <div class="entity__head-left">
+                    <div class="entity__img">
+                      <img src="../dist/img/discount-logo.png" width="34" height="34" alt="logo">
+                    </div>
+                    <div class="entity-info">
+                      <div class="d-flex">
+                        <span class="entity-info__platform">Яндекс Маркет</span>
+                        <span class="entity-info__type">промокод</span>
+                        <span class="entity-pin">
+                          <span class="entity-pin__item entity-pin__item--active"></span>
+                          <span class="entity-pin__item entity-pin__item--active"></span>
+                          <span class="entity-pin__item"></span>
+                        </span>
+                      </div>
+                      <h3 class="entity-info__title">Скидка 10% на первый заказ</h3>
+                    </div>
+                  </div>
+                  <div class="entity__head-right">
+                    <div class="entity__numbers">
+                      <div class="entity__number">
+                        <div class="entity__number-title">UID</div>
+                        <div class="entity__number-text">99999</div>
+                      </div>
+                      <div class="entity__number">
+                        <div class="entity__number-title">Клики</div>
+                        <div class="entity__number-text">99999</div>
+                      </div>
+                    </div>
+                    <div class="entity__buttons">
+                      <button class="entity__btn accordion__btn"><span class="icon icon-chevron-down"></span></button>
+                      <a href="#" target="_blank" class="entity__btn entity__btn--show"><span class="icon icon-eye"></span></a>
+                      <button class="entity__btn entity__btn--delete"><span class="icon icon-trash"></span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__body-inner">
+                    <form action="#">
+                      <div class="form-row">
+                        <div class="form-col-6">
+                          <label class="form-label" for="platform-1">Площадка</label>
+                          <input type="text" class="form-control" name="platform" id="platform-1" value="Яндекс Маркет">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col">
+                          <label class="form-label" for="title-1">Заголовок</label>
+                          <input type="text" class="form-control" name="title" id="title-1" value="Скидка 10% на первый заказ">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col">
+                          <label class="form-label" for="terms-1">Условия использования</label>
+                          <input type="text" class="form-control" name="terms" id="terms-1" value="Введите промокод при оформлении первого заказ про промокоду">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6">
+                          <label class="form-label" for="promo-code-show-1">Отображаемый промокод</label>
+                          <input type="text" class="form-control" name="promo-code-show" id="promo-code-show-1" value="VASASALE10">
+                        </div>
+                        <div class="form-col-6">
+                          <label class="form-label" for="promo-code-copy-1">Промокод для копирования</label>
+                          <input type="text" class="form-control" name="promo-code-copy" id="promo-code-copy-1" value="TZAR10">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6">
+                          <label class="form-label" for="validity-1">Срок действия</label>
+                          <input type="date" class="form-control form-control--invalid" name="validity" id="validity-1">
+                          <div class="form-invalid">
+                            <div class="form-invalid__inner"> Укажите дату окончания акции </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-pinned">
+                        <div class="form-row">
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-home-1">Закреплен на Главной</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-home" id="pinned-home-1" checked>
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-home-priority-1">Приоритет</label>
+                              <input type="number" class="form-control form-control--short" name="pinned-home-priority" id="pinned-home-priority-1" placeholder="0 - 10">
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-home-marked-1">Выделен</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-home-marked" id="pinned-home-marked-1">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-category-1">Закреплен в Разделе</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-category" id="pinned-category-1" checked>
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-category-priority-1">Приоритет</label>
+                              <input type="number" class="form-control form-control--short" name="pinned-category-priority" id="pinned-category-priority-1" placeholder="0 - 10">
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-category-marked-1">Выделен</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-category-marked" id="pinned-category-marked-1">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-store-1">Закреплен в Магазине</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-store" id="pinned-store-1">
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-store-priority-1">Приоритет</label>
+                              <input type="number" class="form-control form-control--short" name="pinned-store-priority" id="pinned-store-priority-1" placeholder="0 - 10">
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-store-marked-1">Выделен</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-store-marked" id="pinned-store-marked-1" checked>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6">
+                          <label class="form-label" for="visibility-1">Видимость</label>
+                          <select class="form-select" name="visibility" id="visibility-1">
+                            <option selected value="0">Не отображается</option>
+                            <option value="1">Отображается</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="entity__footer">
+                        <div class="entity__footer-buttons">
+                          <button class="btn btn-purple-outline">сохранить изменения</button>
+                          <button class="btn btn-transparent">снять с публикации</button>
+                        </div>
+                        <div class="entity__footer-text"> Последнее изменение: 10.05.2022 в 14:44, ID: <u>5567</u>
+                        </div>
+                      </div>
+                      <!--                <div class="form-row">-->
+                      <!--                    <div class="form-col-6">-->
+                      <!--                        <label class="form-label">Иконка страницы</label>-->
+                      <!--                        <div class="file">-->
+                      <!--                            <input type="file" id="file-1" class="file-input form-control">-->
+                      <!--                            <label for="file-1" class="input-group">-->
+                      <!--                                <span class="file-name form-control">Выберите иконку страницы</span>-->
+                      <!--                                <span class="input-group-text">обзор...</span>-->
+                      <!--                            </label>-->
+                      <!--                        </div>-->
+                      <!--                    </div>-->
+                      <!--                </div>-->
+                      <!--            <div class="form-row">-->
+                      <!--                <div class="form-col">-->
+                      <!--                    <div class="input-group mb-3">-->
+                      <!--                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">-->
+                      <!--                        <span class="input-group-text" id="basic-addon2">@example.com</span>-->
+                      <!--                    </div>-->
+                      <!--                </div>-->
+                      <!--            </div>-->
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- accordion__item end -->
+              <!-- accordion__item start -->
+              <div class="accordion__item entity ">
+                <div class="accordion__head">
+                  <div class="entity__head-left">
+                    <div class="entity__img">
+                      <img src="../dist/img/discount-logo.png" width="34" height="34" alt="logo">
+                    </div>
+                    <div class="entity-info">
+                      <div class="d-flex">
+                        <span class="entity-info__platform">Яндекс Маркет</span>
+                        <span class="entity-info__type">промокод</span>
+                        <span class="entity-pin">
+                          <span class="entity-pin__item entity-pin__item--active"></span>
+                          <span class="entity-pin__item entity-pin__item--active"></span>
+                          <span class="entity-pin__item"></span>
+                        </span>
+                      </div>
+                      <h3 class="entity-info__title">Скидка 10% на первый заказ</h3>
+                    </div>
+                  </div>
+                  <div class="entity__head-right">
+                    <div class="entity__numbers">
+                      <div class="entity__number">
+                        <div class="entity__number-title">UID</div>
+                        <div class="entity__number-text">99999</div>
+                      </div>
+                      <div class="entity__number">
+                        <div class="entity__number-title">Клики</div>
+                        <div class="entity__number-text">99999</div>
+                      </div>
+                    </div>
+                    <div class="entity__buttons">
+                      <button class="entity__btn accordion__btn"><span class="icon icon-chevron-down"></span></button>
+                      <a href="#" target="_blank" class="entity__btn entity__btn--show"><span class="icon icon-eye"></span></a>
+                      <button class="entity__btn entity__btn--delete"><span class="icon icon-trash"></span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__body-inner">
+                    <form action="#">
+                      <div class="form-row">
+                        <div class="form-col-6">
+                          <label class="form-label" for="platform-2">Площадка</label>
+                          <input type="text" class="form-control" name="platform" id="platform-2" value="Яндекс Маркет">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col">
+                          <label class="form-label" for="title-2">Заголовок</label>
+                          <input type="text" class="form-control" name="title" id="title-2" value="Скидка 10% на первый заказ">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col">
+                          <label class="form-label" for="terms-2">Условия использования</label>
+                          <input type="text" class="form-control" name="terms" id="terms-2" value="Введите промокод при оформлении первого заказ про промокоду">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6">
+                          <label class="form-label" for="promo-code-show-2">Отображаемый промокод</label>
+                          <input type="text" class="form-control" name="promo-code-show" id="promo-code-show-2" value="VASASALE10">
+                        </div>
+                        <div class="form-col-6">
+                          <label class="form-label" for="promo-code-copy-2">Промокод для копирования</label>
+                          <input type="text" class="form-control" name="promo-code-copy" id="promo-code-copy-2" value="TZAR10">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6">
+                          <label class="form-label" for="validity-2">Срок действия</label>
+                          <input type="date" class="form-control form-control--invalid" name="validity" id="validity-2">
+                          <div class="form-invalid">
+                            <div class="form-invalid__inner"> Укажите дату окончания акции </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-pinned">
+                        <div class="form-row">
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-home-2">Закреплен на Главной</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-home" id="pinned-home-2" checked>
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-home-priority-2">Приоритет</label>
+                              <input type="number" class="form-control form-control--short" name="pinned-home-priority" id="pinned-home-priority-2" placeholder="0 - 10">
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-home-marked-2">Выделен</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-home-marked" id="pinned-home-marked-2">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-category-2">Закреплен в Разделе</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-category" id="pinned-category-2" checked>
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-category-priority-2">Приоритет</label>
+                              <input type="number" class="form-control form-control--short" name="pinned-category-priority" id="pinned-category-priority-2" placeholder="0 - 10">
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-category-marked-2">Выделен</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-category-marked" id="pinned-category-marked-2">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-store-2">Закреплен в Магазине</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-store" id="pinned-store-2">
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-store-priority-2">Приоритет</label>
+                              <input type="number" class="form-control form-control--short" name="pinned-store-priority" id="pinned-store-priority-2" placeholder="0 - 10">
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-store-marked-2">Выделен</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-store-marked" id="pinned-store-marked-2" checked>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6">
+                          <label class="form-label" for="visibility-2">Видимость</label>
+                          <select class="form-select" name="visibility" id="visibility-2">
+                            <option selected value="0">Не отображается</option>
+                            <option value="1">Отображается</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="entity__footer">
+                        <div class="entity__footer-buttons">
+                          <button class="btn btn-purple-outline">сохранить изменения</button>
+                          <button class="btn btn-transparent">снять с публикации</button>
+                        </div>
+                        <div class="entity__footer-text"> Последнее изменение: 10.05.2022 в 14:44, ID: <u>5567</u>
+                        </div>
+                      </div>
+                      <!--                <div class="form-row">-->
+                      <!--                    <div class="form-col-6">-->
+                      <!--                        <label class="form-label">Иконка страницы</label>-->
+                      <!--                        <div class="file">-->
+                      <!--                            <input type="file" id="file-2" class="file-input form-control">-->
+                      <!--                            <label for="file-2" class="input-group">-->
+                      <!--                                <span class="file-name form-control">Выберите иконку страницы</span>-->
+                      <!--                                <span class="input-group-text">обзор...</span>-->
+                      <!--                            </label>-->
+                      <!--                        </div>-->
+                      <!--                    </div>-->
+                      <!--                </div>-->
+                      <!--            <div class="form-row">-->
+                      <!--                <div class="form-col">-->
+                      <!--                    <div class="input-group mb-3">-->
+                      <!--                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">-->
+                      <!--                        <span class="input-group-text" id="basic-addon2">@example.com</span>-->
+                      <!--                    </div>-->
+                      <!--                </div>-->
+                      <!--            </div>-->
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- accordion__item end -->
+              <!-- accordion__item start -->
+              <div class="accordion__item entity  entity--deleted ">
+                <div class="accordion__head">
+                  <div class="entity__head-left">
+                    <div class="entity__img">
+                      <img src="../dist/img/discount-logo.png" width="34" height="34" alt="logo">
+                    </div>
+                    <div class="entity-info">
+                      <div class="d-flex">
+                        <span class="entity-info__platform">Яндекс Маркет</span>
+                        <span class="entity-info__type">промокод</span>
+                        <span class="entity-pin">
+                          <span class="entity-pin__item entity-pin__item--active"></span>
+                          <span class="entity-pin__item entity-pin__item--active"></span>
+                          <span class="entity-pin__item"></span>
+                        </span>
+                      </div>
+                      <h3 class="entity-info__title">Скидка 10% на первый заказ</h3>
+                    </div>
+                  </div>
+                  <div class="entity__head-right">
+                    <div class="entity__numbers">
+                      <div class="entity__number">
+                        <div class="entity__number-title">UID</div>
+                        <div class="entity__number-text">99999</div>
+                      </div>
+                      <div class="entity__number">
+                        <div class="entity__number-title">Клики</div>
+                        <div class="entity__number-text">99999</div>
+                      </div>
+                    </div>
+                    <div class="entity__buttons">
+                      <button class="entity__btn accordion__btn"><span class="icon icon-chevron-down"></span></button>
+                      <a href="#" target="_blank" class="entity__btn entity__btn--show"><span class="icon icon-eye"></span></a>
+                      <button class="entity__btn entity__btn--refresh"><span class="icon icon-refresh"></span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__body-inner">
+                    <form action="#">
+                      <div class="form-row">
+                        <div class="form-col-6">
+                          <label class="form-label" for="platform-3">Площадка</label>
+                          <input type="text" class="form-control" name="platform" id="platform-3" value="Яндекс Маркет">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col">
+                          <label class="form-label" for="title-3">Заголовок</label>
+                          <input type="text" class="form-control" name="title" id="title-3" value="Скидка 10% на первый заказ">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col">
+                          <label class="form-label" for="terms-3">Условия использования</label>
+                          <input type="text" class="form-control" name="terms" id="terms-3" value="Введите промокод при оформлении первого заказ про промокоду">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6">
+                          <label class="form-label" for="promo-code-show-3">Отображаемый промокод</label>
+                          <input type="text" class="form-control" name="promo-code-show" id="promo-code-show-3" value="VASASALE10">
+                        </div>
+                        <div class="form-col-6">
+                          <label class="form-label" for="promo-code-copy-3">Промокод для копирования</label>
+                          <input type="text" class="form-control" name="promo-code-copy" id="promo-code-copy-3" value="TZAR10">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6">
+                          <label class="form-label" for="validity-3">Срок действия</label>
+                          <input type="date" class="form-control form-control--invalid" name="validity" id="validity-3">
+                          <div class="form-invalid">
+                            <div class="form-invalid__inner"> Укажите дату окончания акции </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-pinned">
+                        <div class="form-row">
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-home-3">Закреплен на Главной</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-home" id="pinned-home-3" checked>
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-home-priority-3">Приоритет</label>
+                              <input type="number" class="form-control form-control--short" name="pinned-home-priority" id="pinned-home-priority-3" placeholder="0 - 10">
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-home-marked-3">Выделен</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-home-marked" id="pinned-home-marked-3">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-category-3">Закреплен в Разделе</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-category" id="pinned-category-3" checked>
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-category-priority-3">Приоритет</label>
+                              <input type="number" class="form-control form-control--short" name="pinned-category-priority" id="pinned-category-priority-3" placeholder="0 - 10">
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-category-marked-3">Выделен</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-category-marked" id="pinned-category-marked-3">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-store-3">Закреплен в Магазине</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-store" id="pinned-store-3">
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-store-priority-3">Приоритет</label>
+                              <input type="number" class="form-control form-control--short" name="pinned-store-priority" id="pinned-store-priority-3" placeholder="0 - 10">
+                            </div>
+                          </div>
+                          <div class="form-col-4">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-store-marked-3">Выделен</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-store-marked" id="pinned-store-marked-3" checked>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6">
+                          <label class="form-label" for="visibility-3">Видимость</label>
+                          <select class="form-select" name="visibility" id="visibility-3">
+                            <option selected value="0">Не отображается</option>
+                            <option value="1">Отображается</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="entity__footer">
+                        <div class="entity__footer-buttons">
+                          <button class="btn btn-purple-outline">сохранить изменения</button>
+                          <button class="btn btn-transparent">восстановить</button>
+                        </div>
+                        <div class="entity__footer-text"> Последнее изменение: 10.05.2022 в 14:44, ID: <u>5567</u>
+                          <br> Удалён: 11.05.2022 в 12:12, ID: <u>5567</u>, до полного удаления 27 дней
+                        </div>
+                      </div>
+                      <!--                <div class="form-row">-->
+                      <!--                    <div class="form-col-6">-->
+                      <!--                        <label class="form-label">Иконка страницы</label>-->
+                      <!--                        <div class="file">-->
+                      <!--                            <input type="file" id="file-3" class="file-input form-control">-->
+                      <!--                            <label for="file-3" class="input-group">-->
+                      <!--                                <span class="file-name form-control">Выберите иконку страницы</span>-->
+                      <!--                                <span class="input-group-text">обзор...</span>-->
+                      <!--                            </label>-->
+                      <!--                        </div>-->
+                      <!--                    </div>-->
+                      <!--                </div>-->
+                      <!--            <div class="form-row">-->
+                      <!--                <div class="form-col">-->
+                      <!--                    <div class="input-group mb-3">-->
+                      <!--                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">-->
+                      <!--                        <span class="input-group-text" id="basic-addon2">@example.com</span>-->
+                      <!--                    </div>-->
+                      <!--                </div>-->
+                      <!--            </div>-->
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- accordion__item end -->
+            </div>
+            <!-- pagination start -->
+            <div class="pagination-wr">
+              <nav>
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link page-link--active" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                </ul>
+              </nav>
+              <nav class="limit">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link page-link--active" href="#">20</a></li>
+                  <li class="page-item"><a class="page-link" href="#">50</a></li>
+                  <li class="page-item"><a class="page-link" href="#">100</a></li>
+                </ul>
+              </nav>
+            </div>
+            <!-- pagination end -->
+          </div>
+          <!-- .main end -->
+          <!-- sidebar start -->
+          <aside class="sidebar">
+            <nav class="menu">
+              <div class="menu-section">
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">Добавить материал</span>
+                      <span class="icon icon-plus-circle"></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-section">
+                <p class="menu-section__title">Материалы</p>
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">На модерации</span>
+                      <span class="menu-link__count  menu-link__count--colored ">52</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <span class="menu-link menu-link--active">
+                      <span class="menu-link__text">Опубликовано</span>
+                      <span class="menu-link__count ">1552</span>
+                    </span>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">Снято с публикации</span>
+                      <span class="menu-link__count ">5555</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-section">
+                <p class="menu-section__title">Пользователи</p>
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">Пользователи</span>
+                      <span class="menu-link__count ">525553</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">Модераторы</span>
+                      <span class="menu-link__count ">10</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">Администраторы</span>
+                      <span class="menu-link__count ">2</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-section">
+                <p class="menu-section__title">Страницы</p>
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">Категории</span>
+                      <span class="menu-link__count ">21</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">Магазины</span>
+                      <span class="menu-link__count ">1310</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">Страницы</span>
+                      <span class="menu-link__count ">3</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">Баннеры</span>
+                      <span class="menu-link__count ">4</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-section">
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">Редактор кода</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">Настройки профиля</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">Настройки сайта</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </aside>
+          <!-- sidebar end -->
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__copyright">По скидосу © 2022</p>
+          <div class="footer__links">
+            <a href="#" class="footer__link" target="_blank">Рекламодателям</a>
+            <a href="#" class="footer__link" target="_blank">О проекте</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./dist/js/main.js"></script>
+</body>
+
+</html>

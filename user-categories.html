@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
+  <link rel="stylesheet" href="dist/owl-carousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="dist/fancybox/fancybox.css">
+  <link rel="stylesheet" href="./dist/css/main.css?v=259">
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="user-home.html">
+            <img src="./dist/img/logo.svg" alt="logo">
+          </a>
+          <div class="header__search">
+            <input type="text" class="form-control" placeholder="Например: Сбермаркет" id="search-input">
+            <div id="search-reset"><span class="icon icon-cancel"></span></div>
+            <div id="search-list">
+              <ul class="search-list__inner">
+                <li class="search-list__item">
+                  <a href="user-shop.html">
+                    <span class="search-list__item-name"><strong>Сбер</strong>маркет</span>
+                    <span class="search-list__item-type">Магазин</span>
+                  </a>
+                </li>
+                <li class="search-list__item">
+                  <a href="user-category.html">
+                    <span class="search-list__item-name"><strong>Сбер</strong>продукты</span>
+                    <span class="search-list__item-type">Категория</span>
+                  </a>
+                </li>
+                <li class="search-list__item">
+                  <a href="user-category.html">
+                    <span class="search-list__item-name"><strong>Сбер</strong>МегаМаркет</span>
+                    <span class="search-list__item-type">Категория</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__account">
+            <div class="header__account-inner">
+              <div class="header__account-visible">
+                <div class="header__account-img avatar ">
+                  <img src="./dist/img/user-icon.png" alt="avatar" aria-label="presentation">
+                </div>
+                <span class="header__account-text">Войти</span>
+              </div>
+              <div class="header__account-hidden">
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="#" class="menu-link" data-src="#popup-login" data-fancybox="popup-rounded-login">
+                      <span class="menu-link__text">Войти</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link" data-src="#popup-register" data-fancybox="popup-rounded-register">
+                      <span class="menu-link__text">Зарегистрироваться</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button id="burger" data-fancybox="menu" data-src="#menu-mobile">
+            <span class="burger__inner"></span>
+          </button>
+          <div id="menu-mobile">
+            <div class="menu-mobile__inner">
+              <div class="menu-section">
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="user-home.html" class="menu-link">
+                      <span class="menu-link__text">Главная</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="user-categories.html" class="menu-link">
+                      <span class="menu-link__text">Категории</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="user-shops.html" class="menu-link">
+                      <span class="menu-link__text">Магазины</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link" data-src="#popup-contacts" data-fancybox="popup-rounded-contacts-menu">
+                      <span class="menu-link__text">О проекте</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link" data-src="#popup-b2b" data-fancybox="popup-rounded-b2b-menu">
+                      <span class="menu-link__text">Рекламодателям</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page-heading">
+        <div class="container">
+          <div class="page-heading__inner">
+            <h1 class="page-heading__title">Путешествия</h1>
+            <p class="page-heading__subtitle">В этой категории мы собрали самые вкусные предложения по твоим любимым магазинам, просто выбери подходиящую скидку, активируй акцию или промокод сделай покупку и наслаждайся любимым сервисом и приятной экономией. </p>
+          </div>
+          <hr>
+        </div>
+      </section>
+      <div class="container">
+        <section class="section-categories">
+          <div class="carousel-items-list">
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Еда</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>Сбермаркет, Яндекс Еда, Delivery Club, Пятёрочка ...</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Каршеринг</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>Делимобиль, Яндекс Драйв, YouDrive, BelkaCar ...</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Такси</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>Яндекс Такси, Ситимобил, Gett, Bolt, Uber ...</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Путешествия</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>AirBnB, Booking, Level Travel, One Two Trip</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Банки</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>Тинькофф Банк, Альфа Банк, Хом Кредит</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Маркетплейсы</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>Aliexpress, Беру!, Goods, Ozon </p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Каршеринг</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>Делимобиль, Яндекс Драйв, YouDrive, BelkaCar ...</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Такси</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>Яндекс Такси, Ситимобил, Gett, Bolt, Uber ...</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Такси</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>Яндекс Такси, Ситимобил, Gett, Bolt, Uber ...</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Путешествия</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>AirBnB, Booking, Level Travel, One Two Trip</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Банки</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>Тинькофф Банк, Альфа Банк, Хом Кредит</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Маркетплейсы</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>Aliexpress, Беру!, Goods, Ozon </p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Путешествия</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>AirBnB, Booking, Level Travel, One Two Trip</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Банки</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>Тинькофф Банк, Альфа Банк, Хом Кредит</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Маркетплейсы</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>Aliexpress, Беру!, Goods, Ozon </p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Каршеринг</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>Делимобиль, Яндекс Драйв, YouDrive, BelkaCar ...</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Путешествия</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>AirBnB, Booking, Level Travel, One Two Trip</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-category">
+              <div class="carousel-item__inner">
+                <div class="carousel-item-head">
+                  <div class="carousel-item-name">Такси</div>
+                </div>
+                <div class="carousel-item-body">
+                  <div class="carousel-item-description">
+                    <p>Яндекс Такси, Ситимобил, Gett, Bolt, Uber ...</p>
+                  </div>
+                  <a href="user-category.html" class="btn stretched-link">перейти</a>
+                </div>
+              </div>
+            </div>
+            <div class="fix-col"></div>
+            <div class="fix-col"></div>
+            <div class="fix-col"></div>
+            <div class="fix-col"></div>
+            <div class="fix-col"></div>
+          </div>
+        </section>
+        <section class="section-banner">
+          <div class="banner__inner banner__inner--yandex" style="background-image: url('dist/img/banner-2.jpg')">
+            <a href="#" class="download-link download-link--play-market" target="_blank"></a>
+            <a href="#" class="download-link download-link--app-store" target="_blank"></a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__copyright">По скидосу © 2022</p>
+          <div class="footer__links">
+            <a href="#" class="footer__link" data-src="#popup-b2b" data-fancybox="popup-rounded-b2b">Рекламодателям</a>
+            <a href="#" class="footer__link" data-src="#popup-contacts" data-fancybox="popup-rounded-contacts">О проекте</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div id="popup-terms" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Условия использования</div>
+    </div>
+    <div class="popup-content">
+      <div class="popup-text" id="popup-terms-description">
+      </div>
+      <div class="popup-buttons" id="popup-terms-buttons">
+      </div>
+    </div>
+  </div>
+  <div id="popup-login" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Авторизация</div>
+      <div class="popup-title-row popup-title-row--2">Войдите в свою учётную запись для управления подписками и своими промоакциями</div>
+    </div>
+    <div class="popup-content">
+      <form action="">
+        <div class="form-row">
+          <div class="form-col">
+            <input type="text" class="form-control" name="email" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <input type="password" class="form-control" name="email" placeholder="Пароль">
+          </div>
+        </div>
+        <div class="popup-buttons">
+          <button href="#" class="btn">войти на сайт</button>
+          <a href="#" class="btn btn-transparent fancy-close" data-fancybox="popup-rounded-forgot" data-src="#popup-forgot">забыли пароль?</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="popup-register" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Регистрация</div>
+      <div class="popup-title-row popup-title-row--2">Регистрация на сайте позволит публиковать промокоды и акции на сайт, а также управлять рассылкой</div>
+    </div>
+    <div class="popup-content">
+      <form action="">
+        <div class="form-row">
+          <div class="form-col">
+            <input type="text" class="form-control" name="login" placeholder="Имя пользователя">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <input type="text" class="form-control" name="email" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <input type="password" class="form-control" name="email" placeholder="Пароль">
+          </div>
+        </div>
+        <div class="popup-buttons">
+          <button class="btn">зарегистрироваться</button>
+          <a href="#" class="btn btn-transparent fancy-close" data-fancybox="popup-rounded-login-register" data-src="#popup-login">войти</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="popup-forgot" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Восстановление пароля</div>
+      <div class="popup-title-row popup-title-row--2">Введите свой e-mail и мы вышлем новый автоматически сгенерированный пароль</div>
+    </div>
+    <div class="popup-content">
+      <form action="">
+        <div class="form-row">
+          <div class="form-col">
+            <input type="password" class="form-control" name="email" placeholder="Пароль">
+          </div>
+        </div>
+        <div class="popup-buttons">
+          <button class="btn">выслать пароль</button>
+          <a href="#" class="btn btn-transparent fancy-close" data-fancybox="popup-rounded-login-forgot" data-src="#popup-login">войти</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="popup-contacts" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Контакты</div>
+      <div class="popup-title-row popup-title-row--2">Хотите сообщить об ошибках в работе сайта, неактуальных спецпредложениях или поделиться пожеланиями? Свяжитесь с нами любым из представленных ниже способов.</div>
+    </div>
+    <div class="popup-content">
+      <div class="popup-contacts-list">
+        <ul>
+          <li>
+            <a href="https://instagram.com/poskidosu" class="stretched-link">
+              <img src="dist/img/instagram.png" alt=""> instagram.com/poskidosu </a>
+            <span class="icon-arrow-right"></span>
+          </li>
+          <li>
+            <a href="https://t.me/poskidosu" class="stretched-link" target="_blank">
+              <img src="dist/img/telegram.png" alt=""> t.me/poskidosu </a>
+            <span class="icon-arrow-right"></span>
+          </li>
+          <li>
+            <a href="https://vk.com/poskidosu" class="stretched-link" target="_blank">
+              <img src="dist/img/vk.png" alt=""> vk.com/poskidosu </a>
+            <span class="icon-arrow-right"></span>
+          </li>
+          <li>
+            <a href="mailto:support@poskidosu.ru" class="stretched-link">
+              <img src="dist/img/mail.png" alt=""> support@poskidosu.ru </a>
+            <span class="icon-arrow-right"></span>
+          </li>
+        </ul>
+      </div>
+      <div class="popup-team">
+        <div class="popup-team-title">Наша команда</div>
+        <div class="popup-team-list">
+          <div class="popup-team-item">
+            <div class="popup-team-item__img">
+              <img src="dist/img/team-1.png" alt="">
+            </div>
+            <div class="popup-team-item__name">Dmitry Tzar <span>Основатель</span></div>
+            <div class="popup-team-item__info">Веду блог о бизнесе, жизни, путешествиях</div>
+            <div class="popup-team-item__links">
+              <a href="https://t.me/poskidosu" target="_blank">
+                <img src="dist/img/telegram.png" alt="">
+              </a>
+              <a href="https://instagram.com/poskidosu" target="_blank">
+                <img src="dist/img/instagram.png" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="popup-team-item">
+            <div class="popup-team-item__img">
+              <img src="dist/img/team-2.png" alt="">
+            </div>
+            <div class="popup-team-item__name">Victoria Ogai <span>Дизайн-консультант</span></div>
+            <div class="popup-team-item__info">Моменты из жизни и дизайн</div>
+            <div class="popup-team-item__links">
+              <a href="https://t.me/poskidosu" target="_blank">
+                <img src="dist/img/telegram.png" alt="">
+              </a>
+              <a href="https://instagram.com/poskidosu" target="_blank">
+                <img src="dist/img/instagram.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popup-b2b" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Рекламодателям</div>
+      <div class="popup-title-row popup-title-row--2">Наша площадка предлагает различные варианты рекламных интеграций, которыми вы можете воспользоваться. Ниже приведены примеры.</div>
+    </div>
+    <div class="popup-content">
+      <div class="popup-banner">
+        <div class="popup-banner__title">HTML5 баннер</div>
+        <div class="popup-banner__list">
+          <div class="popup-banner__item popup-banner__item--wide"><span>1120 x 90</span></div>
+        </div>
+        <div class="popup-banner__descr">Адаптивный HTML5 баннер. Максиальные размеры 1120x90.</div>
+        <div class="popup-banner__title">Блок Акция/Промокод</div>
+        <div class="popup-banner__list">
+          <div class="popup-banner__item popup-banner__item--active"><span>240 x 350</span></div>
+          <div class="popup-banner__item"><span>240 x 350</span></div>
+          <div class="popup-banner__item"><span>240 x 350</span></div>
+        </div>
+        <div class="popup-banner__descr">Карточка акция/промокод. Фиксированный размер 240x350.</div>
+      </div>
+    </div>
+  </div>
+  <script src="dist/js/jquery.min.js"></script>
+  <script src="dist/owl-carousel/owl.carousel.min.js"></script>
+  <script src="dist/fancybox/fancybox.umd.js"></script>
+  <script src="./dist/js/main.js?v=256"></script>
+</body>
+
+</html>

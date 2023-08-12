@@ -1,0 +1,1101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
+  <link rel="stylesheet" href="dist/fancybox/fancybox.css">
+  <link rel="stylesheet" href="./dist/css/main.css?v=259">
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="admin-shops.html">
+            <img src="./dist/img/logo.svg" alt="logo">
+          </a>
+          <div class="header__search">
+            <input type="text" class="form-control" placeholder="Например: Сбермаркет" id="search-input">
+            <div id="search-reset"><span class="icon icon-cancel"></span></div>
+            <div id="search-list">
+              <ul class="search-list__inner">
+                <li class="search-list__item">
+                  <a href="user-shop.html">
+                    <span class="search-list__item-name"><strong>Сбер</strong>маркет</span>
+                    <span class="search-list__item-type">Магазин</span>
+                  </a>
+                </li>
+                <li class="search-list__item">
+                  <a href="user-category.html">
+                    <span class="search-list__item-name"><strong>Сбер</strong>продукты</span>
+                    <span class="search-list__item-type">Категория</span>
+                  </a>
+                </li>
+                <li class="search-list__item">
+                  <a href="user-category.html">
+                    <span class="search-list__item-name"><strong>Сбер</strong>МегаМаркет</span>
+                    <span class="search-list__item-type">Категория</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__account">
+            <div class="header__account-inner">
+              <div class="header__account-visible">
+                <div class="header__account-img avatar avatar--pink">
+                  <img src="./dist/img/user-icon.png" alt="avatar" aria-label="presentation">
+                </div>
+                <span class="header__account-text"><u>ID 5435</u></span>
+              </div>
+              <div class="header__account-hidden">
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="admin-profile.html" class="menu-link">
+                      <span class="menu-link__text">Мой профиль</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-profile.html" class="menu-link">
+                      <span class="menu-link__text">Выйти</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button id="burger" data-fancybox="menu" data-src="#menu-mobile">
+            <span class="burger__inner"></span>
+          </button>
+          <div id="menu-mobile">
+            <div class="menu-mobile__inner">
+              <div class="menu-section">
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="user-home.html" class="menu-link">
+                      <span class="menu-link__text">Главная</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="user-categories.html" class="menu-link">
+                      <span class="menu-link__text">Категории</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="user-shops.html" class="menu-link">
+                      <span class="menu-link__text">Магазины</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link" data-src="#popup-contacts" data-fancybox="popup-rounded-contacts-menu">
+                      <span class="menu-link__text">О проекте</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link" data-src="#popup-b2b" data-fancybox="popup-rounded-b2b-menu">
+                      <span class="menu-link__text">Рекламодателям</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page-heading">
+        <div class="container">
+          <div class="page-heading__inner">
+            <h1 class="page-heading__title">Панель управления</h1>
+            <p class="page-heading__subtitle">На этой странице можно добавить материал, страницы, и выполнить другие административные действия с сайтом.</p>
+          </div>
+          <hr>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row">
+          <!-- .main start -->
+          <div class="main">
+            <h2 class="section-title">Магазины</h2>
+            <!-- filter start -->
+            <div class="overflow">
+              <div class="admin__filter-wr">
+                <div class="admin__filter">
+                  <div class="admin__filter-item admin__filter-item--sort">
+                    <a class="admin__filter-sort" href="#">
+                      <!--                <span class="icon icon-sort-up"><span class="path1"></span><span class="path2"></span></span>-->
+                      <span class="icon icon-sort-down"><span class="path1"></span><span class="path2"></span></span>
+                      <span>По дате</span>
+                    </a>
+                    <div class="admin__filter-list">
+                      <button class="admin__filter-list-item">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="sort" id="sort-date-desc" checked>
+                          <label class="form-check-label" for="sort-date-desc"> По дате (сначала новые) </label>
+                        </div>
+                      </button>
+                      <button class="admin__filter-list-item">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="sort" id="sort-date-acs">
+                          <label class="form-check-label" for="sort-date-acs"> По дате (сначала старые) </label>
+                        </div>
+                      </button>
+                      <button class="admin__filter-list-item">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="sort" id="sort-changes-desc">
+                          <label class="form-check-label" for="sort-changes-desc"> Изменения (сначала новые) </label>
+                        </div>
+                      </button>
+                      <button class="admin__filter-list-item">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="sort" id="sort-changes-asc">
+                          <label class="form-check-label" for="sort-changes-asc"> Изменения (сначала старые) </label>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="admin__filter-item">
+                    <input placeholder="ID" type="text" class="admin__filter-input admin__filter-input--id">
+                    <div class="admin__filter-list">
+                      <button class="admin__filter-list-item"><span>1</span></button>
+                      <button class="admin__filter-list-item"><span>2</span></button>
+                      <button class="admin__filter-list-item"><span>3</span></button>
+                    </div>
+                  </div>
+                  <div class="admin__filter-item">
+                    <input placeholder="Статус" type="text" class="admin__filter-input admin__filter-input--status">
+                    <div class="admin__filter-list">
+                      <button class="admin__filter-list-item"><span>Активен</span></button>
+                      <button class="admin__filter-list-item"><span>Неактивен</span></button>
+                    </div>
+                  </div>
+                </div>
+                <button class="admin__filter-reset">Сбросить фильтры</button>
+              </div>
+            </div>
+            <!-- filter end -->
+            <div class="accordion-wr admin-accordion">
+              <!-- accordion__item start -->
+              <div class="accordion__item entity ">
+                <div class="accordion__head">
+                  <div class="entity__head-left">
+                    <div class="entity__img">
+                      <img src="../dist/img/discount-logo.png" width="34" height="34" alt="logo">
+                    </div>
+                    <div class="entity-info">
+                      <div class="d-flex">
+                        <span class="entity-info__platform">Магазин</span>
+                        <span class="entity-pin">
+                          <span class="entity-pin__item entity-pin__item--active"></span>
+                          <span class="entity-pin__item entity-pin__item--active"></span>
+                          <span class="entity-pin__item"></span>
+                        </span>
+                      </div>
+                      <h3 class="entity-info__title">Яндекс Маркет</h3>
+                    </div>
+                  </div>
+                  <div class="entity__head-right">
+                    <div class="entity__head-right__top">
+                      <div class="entity__buttons">
+                        <button class="entity__btn accordion__btn" aria-label="показать">
+                          <span class="icon icon-chevron-down"></span>
+                        </button>
+                        <button class="entity__btn entity__btn-more" aria-label="">
+                          <span class="icon icon-dots-three"></span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="entity__head-right__bottom">
+                      <div class="entity__numbers">
+                        <div class="entity__number">
+                          <div class="entity__number-title">UID</div>
+                          <div class="entity__number-text">5678</div>
+                        </div>
+                        <div class="entity__number">
+                          <div class="entity__number-title">Скидки</div>
+                          <div class="entity__number-text">8</div>
+                        </div>
+                      </div>
+                      <div class="entity__buttons">
+                        <button class="entity__btn accordion__btn" aria-label="показать">
+                          <span class="icon icon-chevron-down"></span>
+                        </button>
+                        <a href="#" target="_blank" class="entity__btn entity__btn--show" aria-label="предпросмотр">
+                          <span class="icon icon-eye"></span>
+                        </a>
+                        <button class="entity__btn entity__btn--delete" aria-label="удалить">
+                          <span class="icon icon-trash"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__body-inner">
+                    <form action="#">
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="name-5678 ">Раздел</label>
+                          <select class="form-select" name="name" id="name-5678 ">
+                            <option selected value="0">Не отображается</option>
+                            <option value="1">Отображается</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="name-5678 ">Название</label>
+                          <input type="text" class="form-control" name="name" id="name-5678 " placeholder="Введите название площадки">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="description-5678 ">Описание</label>
+                          <input type="text" class="form-control" name="description" id="description-5678 " placeholder="Введите описание площадки">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6  ">
+                          <label class="form-label">Логотип магазина</label>
+                          <div class="file">
+                            <input type="file" id="image-logo-5678 " class="file-input form-control" name="image-logo">
+                            <label for="image-logo-5678 " class="input-group">
+                              <span class="file-name form-control">Выберите логотип магазина</span>
+                              <span class="input-group-text">обзор...</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-col-6  ">
+                          <label class="form-label">Иконка магазина</label>
+                          <div class="file">
+                            <input type="file" id="image-ico-5678 " class="file-input form-control" name="image-ico">
+                            <label for="image-ico-5678 " class="input-group">
+                              <span class="file-name form-control">Выберите иконку магазина</span>
+                              <span class="input-group-text">обзор...</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="url-5678 ">Url</label>
+                          <input type="text" class="form-control" name="url" id="url-5678 " placeholder="Введите url магазина">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="title-5678 ">Title</label>
+                          <input type="text" class="form-control" name="title" id="title-5678 " placeholder="Введите title магазина">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="description-5678 ">Description</label>
+                          <input type="text" class="form-control" name="description" id="description-5678 " placeholder="Введите description магазина">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="description-5678 ">Keywords</label>
+                          <input type="text" class="form-control" name="description" id="description-5678 " placeholder="Введите keywords магазина">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="description-5678 ">Произвольный код</label>
+                          <input type="text" class="form-control" name="description" id="description-5678 " placeholder="Введите код для вставки в <head> страницы">
+                        </div>
+                      </div>
+                      <div class="form-pinned form-pinned--2-col">
+                        <div class="form-row">
+                          <div class="form-col-4  ">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-home-5678 ">Закреплен на Главной</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-home" id="pinned-home-5678 ">
+                            </div>
+                          </div>
+                          <div class="form-col-4  ">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-home-priority-5678 ">Приоритет</label>
+                              <input type="text" class="form-control form-control--short" name="pinned-home-priority" id="pinned-home-priority-5678 " placeholder="0 - 10">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-col-4  ">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-category-5678 ">Закреплен в Разделе</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-category" id="pinned-category-5678 ">
+                            </div>
+                          </div>
+                          <div class="form-col-4  ">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-shop-priority-5678 ">Приоритет</label>
+                              <input type="text" class="form-control form-control--short" name="pinned-shop-priority" id="pinned-shop-priority-5678 " placeholder="0 - 10">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-col-4  ">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-shop-5678 ">Закреплен в Магазине</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-shop" id="pinned-shop-5678 ">
+                            </div>
+                          </div>
+                          <div class="form-col-4  ">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-shop-priority-5678 ">Приоритет</label>
+                              <input type="text" class="form-control form-control--short" name="pinned-shop-priority" id="pinned-shop-priority-5678 " placeholder="0 - 10">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6  ">
+                          <label class="form-label" for="visibility-5678 ">Видимость</label>
+                          <select class="form-select" name="visibility" id="visibility-5678 ">
+                            <option selected value="0">Не отображается</option>
+                            <option value="1">Отображается</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="entity__footer">
+                        <div class="entity__footer-buttons">
+                          <button class="btn btn-purple-outline">сохранить изменения</button>
+                          <button class="btn btn-transparent">удалить магазин</button>
+                        </div>
+                        <div class="entity__footer-text"> Последнее изменение: 10.05.2022 в 14:44, ID: <u>5567</u>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- accordion__item end -->
+              <!-- accordion__item start -->
+              <div class="accordion__item entity ">
+                <div class="accordion__head">
+                  <div class="entity__head-left">
+                    <div class="entity__img">
+                      <img src="../dist/img/discount-logo.png" width="34" height="34" alt="logo">
+                    </div>
+                    <div class="entity-info">
+                      <div class="d-flex">
+                        <span class="entity-info__platform">Магазин</span>
+                        <span class="entity-pin">
+                          <span class="entity-pin__item entity-pin__item--active"></span>
+                          <span class="entity-pin__item entity-pin__item--active"></span>
+                          <span class="entity-pin__item"></span>
+                        </span>
+                      </div>
+                      <h3 class="entity-info__title">Яндекс Маркет</h3>
+                    </div>
+                  </div>
+                  <div class="entity__head-right">
+                    <div class="entity__head-right__top">
+                      <div class="entity__buttons">
+                        <button class="entity__btn accordion__btn" aria-label="показать">
+                          <span class="icon icon-chevron-down"></span>
+                        </button>
+                        <button class="entity__btn entity__btn-more" aria-label="">
+                          <span class="icon icon-dots-three"></span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="entity__head-right__bottom">
+                      <div class="entity__numbers">
+                        <div class="entity__number">
+                          <div class="entity__number-title">UID</div>
+                          <div class="entity__number-text">124</div>
+                        </div>
+                        <div class="entity__number">
+                          <div class="entity__number-title">Скидки</div>
+                          <div class="entity__number-text">12</div>
+                        </div>
+                      </div>
+                      <div class="entity__buttons">
+                        <button class="entity__btn accordion__btn" aria-label="показать">
+                          <span class="icon icon-chevron-down"></span>
+                        </button>
+                        <a href="#" target="_blank" class="entity__btn entity__btn--show" aria-label="предпросмотр">
+                          <span class="icon icon-eye"></span>
+                        </a>
+                        <button class="entity__btn entity__btn--delete" aria-label="удалить">
+                          <span class="icon icon-trash"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__body-inner">
+                    <form action="#">
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="name-124 ">Раздел</label>
+                          <select class="form-select" name="name" id="name-124 ">
+                            <option selected value="0">Не отображается</option>
+                            <option value="1">Отображается</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="name-124 ">Название</label>
+                          <input type="text" class="form-control" name="name" id="name-124 " placeholder="Введите название площадки">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="description-124 ">Описание</label>
+                          <input type="text" class="form-control" name="description" id="description-124 " placeholder="Введите описание площадки">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6  ">
+                          <label class="form-label">Логотип магазина</label>
+                          <div class="file">
+                            <input type="file" id="image-logo-124 " class="file-input form-control" name="image-logo">
+                            <label for="image-logo-124 " class="input-group">
+                              <span class="file-name form-control">Выберите логотип магазина</span>
+                              <span class="input-group-text">обзор...</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-col-6  ">
+                          <label class="form-label">Иконка магазина</label>
+                          <div class="file">
+                            <input type="file" id="image-ico-124 " class="file-input form-control" name="image-ico">
+                            <label for="image-ico-124 " class="input-group">
+                              <span class="file-name form-control">Выберите иконку магазина</span>
+                              <span class="input-group-text">обзор...</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="url-124 ">Url</label>
+                          <input type="text" class="form-control" name="url" id="url-124 " placeholder="Введите url магазина">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="title-124 ">Title</label>
+                          <input type="text" class="form-control" name="title" id="title-124 " placeholder="Введите title магазина">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="description-124 ">Description</label>
+                          <input type="text" class="form-control" name="description" id="description-124 " placeholder="Введите description магазина">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="description-124 ">Keywords</label>
+                          <input type="text" class="form-control" name="description" id="description-124 " placeholder="Введите keywords магазина">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="description-124 ">Произвольный код</label>
+                          <input type="text" class="form-control" name="description" id="description-124 " placeholder="Введите код для вставки в <head> страницы">
+                        </div>
+                      </div>
+                      <div class="form-pinned form-pinned--2-col">
+                        <div class="form-row">
+                          <div class="form-col-4  ">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-home-124 ">Закреплен на Главной</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-home" id="pinned-home-124 ">
+                            </div>
+                          </div>
+                          <div class="form-col-4  ">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-home-priority-124 ">Приоритет</label>
+                              <input type="text" class="form-control form-control--short" name="pinned-home-priority" id="pinned-home-priority-124 " placeholder="0 - 10">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-col-4  ">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-category-124 ">Закреплен в Разделе</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-category" id="pinned-category-124 ">
+                            </div>
+                          </div>
+                          <div class="form-col-4  ">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-shop-priority-124 ">Приоритет</label>
+                              <input type="text" class="form-control form-control--short" name="pinned-shop-priority" id="pinned-shop-priority-124 " placeholder="0 - 10">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-col-4  ">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-shop-124 ">Закреплен в Магазине</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-shop" id="pinned-shop-124 ">
+                            </div>
+                          </div>
+                          <div class="form-col-4  ">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-shop-priority-124 ">Приоритет</label>
+                              <input type="text" class="form-control form-control--short" name="pinned-shop-priority" id="pinned-shop-priority-124 " placeholder="0 - 10">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6  ">
+                          <label class="form-label" for="visibility-124 ">Видимость</label>
+                          <select class="form-select" name="visibility" id="visibility-124 ">
+                            <option selected value="0">Не отображается</option>
+                            <option value="1">Отображается</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="entity__footer">
+                        <div class="entity__footer-buttons">
+                          <button class="btn btn-purple-outline">сохранить изменения</button>
+                          <button class="btn btn-transparent">удалить магазин</button>
+                        </div>
+                        <div class="entity__footer-text"> Последнее изменение: 10.05.2022 в 14:44, ID: <u>5567</u>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- accordion__item end -->
+              <!-- accordion__item start -->
+              <div class="accordion__item entity  entity--deleted ">
+                <div class="accordion__head">
+                  <div class="entity__head-left">
+                    <div class="entity__img">
+                      <img src="../dist/img/discount-logo.png" width="34" height="34" alt="logo">
+                    </div>
+                    <div class="entity-info">
+                      <div class="d-flex">
+                        <span class="entity-info__platform">Магазин</span>
+                        <span class="entity-pin">
+                          <span class="entity-pin__item entity-pin__item--active"></span>
+                          <span class="entity-pin__item entity-pin__item--active"></span>
+                          <span class="entity-pin__item"></span>
+                        </span>
+                      </div>
+                      <h3 class="entity-info__title">Яндекс Маркет</h3>
+                    </div>
+                  </div>
+                  <div class="entity__head-right">
+                    <div class="entity__head-right__top">
+                      <div class="entity__buttons">
+                        <button class="entity__btn accordion__btn" aria-label="показать">
+                          <span class="icon icon-chevron-down"></span>
+                        </button>
+                        <button class="entity__btn entity__btn-more" aria-label="">
+                          <span class="icon icon-dots-three"></span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="entity__head-right__bottom">
+                      <div class="entity__numbers">
+                        <div class="entity__number">
+                          <div class="entity__number-title">UID</div>
+                          <div class="entity__number-text">999</div>
+                        </div>
+                        <div class="entity__number">
+                          <div class="entity__number-title">Скидки</div>
+                          <div class="entity__number-text">8</div>
+                        </div>
+                      </div>
+                      <div class="entity__buttons">
+                        <button class="entity__btn accordion__btn" aria-label="показать">
+                          <span class="icon icon-chevron-down"></span>
+                        </button>
+                        <a href="#" target="_blank" class="entity__btn entity__btn--show" aria-label="предпросмотр">
+                          <span class="icon icon-eye"></span>
+                        </a>
+                        <button class="entity__btn entity__btn--refresh" aria-label="восстановить">
+                          <span class="icon icon-refresh"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <div class="accordion__body-inner">
+                    <form action="#">
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="name-999 ">Раздел</label>
+                          <select class="form-select" name="name" id="name-999 ">
+                            <option selected value="0">Не отображается</option>
+                            <option value="1">Отображается</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="name-999 ">Название</label>
+                          <input type="text" class="form-control" name="name" id="name-999 " placeholder="Введите название площадки">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="description-999 ">Описание</label>
+                          <input type="text" class="form-control" name="description" id="description-999 " placeholder="Введите описание площадки">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6  ">
+                          <label class="form-label">Логотип магазина</label>
+                          <div class="file">
+                            <input type="file" id="image-logo-999 " class="file-input form-control" name="image-logo">
+                            <label for="image-logo-999 " class="input-group">
+                              <span class="file-name form-control">Выберите логотип магазина</span>
+                              <span class="input-group-text">обзор...</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-col-6  ">
+                          <label class="form-label">Иконка магазина</label>
+                          <div class="file">
+                            <input type="file" id="image-ico-999 " class="file-input form-control" name="image-ico">
+                            <label for="image-ico-999 " class="input-group">
+                              <span class="file-name form-control">Выберите иконку магазина</span>
+                              <span class="input-group-text">обзор...</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="url-999 ">Url</label>
+                          <input type="text" class="form-control" name="url" id="url-999 " placeholder="Введите url магазина">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="title-999 ">Title</label>
+                          <input type="text" class="form-control" name="title" id="title-999 " placeholder="Введите title магазина">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="description-999 ">Description</label>
+                          <input type="text" class="form-control" name="description" id="description-999 " placeholder="Введите description магазина">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="description-999 ">Keywords</label>
+                          <input type="text" class="form-control" name="description" id="description-999 " placeholder="Введите keywords магазина">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col ">
+                          <label class="form-label" for="description-999 ">Произвольный код</label>
+                          <input type="text" class="form-control" name="description" id="description-999 " placeholder="Введите код для вставки в <head> страницы">
+                        </div>
+                      </div>
+                      <div class="form-pinned form-pinned--2-col">
+                        <div class="form-row">
+                          <div class="form-col-4  ">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-home-999 ">Закреплен на Главной</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-home" id="pinned-home-999 ">
+                            </div>
+                          </div>
+                          <div class="form-col-4  ">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-home-priority-999 ">Приоритет</label>
+                              <input type="text" class="form-control form-control--short" name="pinned-home-priority" id="pinned-home-priority-999 " placeholder="0 - 10">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-col-4  ">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-category-999 ">Закреплен в Разделе</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-category" id="pinned-category-999 ">
+                            </div>
+                          </div>
+                          <div class="form-col-4  ">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-shop-priority-999 ">Приоритет</label>
+                              <input type="text" class="form-control form-control--short" name="pinned-shop-priority" id="pinned-shop-priority-999 " placeholder="0 - 10">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-col-4  ">
+                            <div class="form-check form-switch">
+                              <label class="form-check-label" for="pinned-shop-999 ">Закреплен в Магазине</label>
+                              <input class="form-check-input" type="checkbox" name="pinned-shop" id="pinned-shop-999 ">
+                            </div>
+                          </div>
+                          <div class="form-col-4  ">
+                            <div class="form-item form-item--row">
+                              <label class="form-label" for="pinned-shop-priority-999 ">Приоритет</label>
+                              <input type="text" class="form-control form-control--short" name="pinned-shop-priority" id="pinned-shop-priority-999 " placeholder="0 - 10">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-col-6  ">
+                          <label class="form-label" for="visibility-999 ">Видимость</label>
+                          <select class="form-select" name="visibility" id="visibility-999 ">
+                            <option selected value="0">Не отображается</option>
+                            <option value="1">Отображается</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="entity__footer">
+                        <div class="entity__footer-buttons">
+                          <button class="btn btn-purple-outline">сохранить изменения</button>
+                          <button class="btn btn-transparent">восстановить</button>
+                        </div>
+                        <div class="entity__footer-text"> Последнее изменение: 10.05.2022 в 14:44, ID: <u>5567</u>
+                          <br> Удалён: 11.05.2022 в 12:12, ID: <u>5567</u>, до полного удаления 27 дней
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- accordion__item end -->
+            </div>
+            <!-- pagination start -->
+            <div class="pagination-wr">
+              <nav>
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link page-link--active" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                </ul>
+              </nav>
+              <nav class="limit">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link page-link--active" href="#">20</a></li>
+                  <li class="page-item"><a class="page-link" href="#">50</a></li>
+                  <li class="page-item"><a class="page-link" href="#">100</a></li>
+                </ul>
+              </nav>
+            </div>
+            <!-- pagination end -->
+          </div>
+          <!-- .main end -->
+          <!-- sidebar start -->
+          <aside class="sidebar">
+            <nav class="sidebar-menu">
+              <div class="menu-section">
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="admin-add.html" class="menu-link">
+                      <span class="menu-link__text">Добавить материал</span>
+                      <span class="icon icon-plus-circle"></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-section">
+                <p class="menu-section__title">Материалы</p>
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="admin-materials.html" class="menu-link">
+                      <span class="menu-link__text">На модерации</span>
+                      <span class="menu-link__count  menu-link__count--colored ">52</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <span class="menu-link menu-link--active">
+                      <span class="menu-link__text">Опубликовано</span>
+                      <span class="menu-link__count ">1552</span>
+                    </span>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-materials.html" class="menu-link">
+                      <span class="menu-link__text">Снято с публикации</span>
+                      <span class="menu-link__count ">5555</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-section">
+                <p class="menu-section__title">Пользователи</p>
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="admin-users.html" class="menu-link">
+                      <span class="menu-link__text">Пользователи</span>
+                      <span class="menu-link__count ">525553</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-users.html" class="menu-link">
+                      <span class="menu-link__text">Модераторы</span>
+                      <span class="menu-link__count ">10</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-users.html" class="menu-link">
+                      <span class="menu-link__text">Администраторы</span>
+                      <span class="menu-link__count ">2</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-section">
+                <p class="menu-section__title">Страницы</p>
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="admin-categories.html" class="menu-link">
+                      <span class="menu-link__text">Категории</span>
+                      <span class="menu-link__count ">21</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-shops.html" class="menu-link">
+                      <span class="menu-link__text">Магазины</span>
+                      <span class="menu-link__count ">1310</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-pages.html" class="menu-link">
+                      <span class="menu-link__text">Страницы</span>
+                      <span class="menu-link__count ">3</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-banners.html" class="menu-link">
+                      <span class="menu-link__text">Баннеры</span>
+                      <span class="menu-link__count ">4</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-section">
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="admin-code.html" class="menu-link">
+                      <span class="menu-link__text">Редактор кода</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-profile.html" class="menu-link">
+                      <span class="menu-link__text">Настройки профиля</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-settings.html" class="menu-link">
+                      <span class="menu-link__text">Настройки сайта</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </aside>
+          <!-- sidebar end -->
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__copyright">По скидосу © 2022</p>
+          <div class="footer__links">
+            <a href="#" class="footer__link" data-src="#popup-b2b" data-fancybox="popup-rounded-b2b">Рекламодателям</a>
+            <a href="#" class="footer__link" data-src="#popup-contacts" data-fancybox="popup-rounded-contacts">О проекте</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div id="popup-terms" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Условия использования</div>
+    </div>
+    <div class="popup-content">
+      <div class="popup-text" id="popup-terms-description">
+      </div>
+      <div class="popup-buttons" id="popup-terms-buttons">
+      </div>
+    </div>
+  </div>
+  <div id="popup-login" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Авторизация</div>
+      <div class="popup-title-row popup-title-row--2">Войдите в свою учётную запись для управления подписками и своими промоакциями</div>
+    </div>
+    <div class="popup-content">
+      <form action="">
+        <div class="form-row">
+          <div class="form-col">
+            <input type="text" class="form-control" name="email" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <input type="password" class="form-control" name="email" placeholder="Пароль">
+          </div>
+        </div>
+        <div class="popup-buttons">
+          <button href="#" class="btn">войти на сайт</button>
+          <a href="#" class="btn btn-transparent fancy-close" data-fancybox="popup-rounded-forgot" data-src="#popup-forgot">забыли пароль?</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="popup-register" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Регистрация</div>
+      <div class="popup-title-row popup-title-row--2">Регистрация на сайте позволит публиковать промокоды и акции на сайт, а также управлять рассылкой</div>
+    </div>
+    <div class="popup-content">
+      <form action="">
+        <div class="form-row">
+          <div class="form-col">
+            <input type="text" class="form-control" name="login" placeholder="Имя пользователя">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <input type="text" class="form-control" name="email" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <input type="password" class="form-control" name="email" placeholder="Пароль">
+          </div>
+        </div>
+        <div class="popup-buttons">
+          <button class="btn">зарегистрироваться</button>
+          <a href="#" class="btn btn-transparent fancy-close" data-fancybox="popup-rounded-login-register" data-src="#popup-login">войти</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="popup-forgot" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Восстановление пароля</div>
+      <div class="popup-title-row popup-title-row--2">Введите свой e-mail и мы вышлем новый автоматически сгенерированный пароль</div>
+    </div>
+    <div class="popup-content">
+      <form action="">
+        <div class="form-row">
+          <div class="form-col">
+            <input type="password" class="form-control" name="email" placeholder="Пароль">
+          </div>
+        </div>
+        <div class="popup-buttons">
+          <button class="btn">выслать пароль</button>
+          <a href="#" class="btn btn-transparent fancy-close" data-fancybox="popup-rounded-login-forgot" data-src="#popup-login">войти</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="popup-contacts" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Контакты</div>
+      <div class="popup-title-row popup-title-row--2">Хотите сообщить об ошибках в работе сайта, неактуальных спецпредложениях или поделиться пожеланиями? Свяжитесь с нами любым из представленных ниже способов.</div>
+    </div>
+    <div class="popup-content">
+      <div class="popup-contacts-list">
+        <ul>
+          <li>
+            <a href="https://instagram.com/poskidosu" class="stretched-link">
+              <img src="dist/img/instagram.png" alt=""> instagram.com/poskidosu </a>
+            <span class="icon-arrow-right"></span>
+          </li>
+          <li>
+            <a href="https://t.me/poskidosu" class="stretched-link" target="_blank">
+              <img src="dist/img/telegram.png" alt=""> t.me/poskidosu </a>
+            <span class="icon-arrow-right"></span>
+          </li>
+          <li>
+            <a href="https://vk.com/poskidosu" class="stretched-link" target="_blank">
+              <img src="dist/img/vk.png" alt=""> vk.com/poskidosu </a>
+            <span class="icon-arrow-right"></span>
+          </li>
+          <li>
+            <a href="mailto:support@poskidosu.ru" class="stretched-link">
+              <img src="dist/img/mail.png" alt=""> support@poskidosu.ru </a>
+            <span class="icon-arrow-right"></span>
+          </li>
+        </ul>
+      </div>
+      <div class="popup-team">
+        <div class="popup-team-title">Наша команда</div>
+        <div class="popup-team-list">
+          <div class="popup-team-item">
+            <div class="popup-team-item__img">
+              <img src="dist/img/team-1.png" alt="">
+            </div>
+            <div class="popup-team-item__name">Dmitry Tzar <span>Основатель</span></div>
+            <div class="popup-team-item__info">Веду блог о бизнесе, жизни, путешествиях</div>
+            <div class="popup-team-item__links">
+              <a href="https://t.me/poskidosu" target="_blank">
+                <img src="dist/img/telegram.png" alt="">
+              </a>
+              <a href="https://instagram.com/poskidosu" target="_blank">
+                <img src="dist/img/instagram.png" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="popup-team-item">
+            <div class="popup-team-item__img">
+              <img src="dist/img/team-2.png" alt="">
+            </div>
+            <div class="popup-team-item__name">Victoria Ogai <span>Дизайн-консультант</span></div>
+            <div class="popup-team-item__info">Моменты из жизни и дизайн</div>
+            <div class="popup-team-item__links">
+              <a href="https://t.me/poskidosu" target="_blank">
+                <img src="dist/img/telegram.png" alt="">
+              </a>
+              <a href="https://instagram.com/poskidosu" target="_blank">
+                <img src="dist/img/instagram.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popup-b2b" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Рекламодателям</div>
+      <div class="popup-title-row popup-title-row--2">Наша площадка предлагает различные варианты рекламных интеграций, которыми вы можете воспользоваться. Ниже приведены примеры.</div>
+    </div>
+    <div class="popup-content">
+      <div class="popup-banner">
+        <div class="popup-banner__title">HTML5 баннер</div>
+        <div class="popup-banner__list">
+          <div class="popup-banner__item popup-banner__item--wide"><span>1120 x 90</span></div>
+        </div>
+        <div class="popup-banner__descr">Адаптивный HTML5 баннер. Максиальные размеры 1120x90.</div>
+        <div class="popup-banner__title">Блок Акция/Промокод</div>
+        <div class="popup-banner__list">
+          <div class="popup-banner__item popup-banner__item--active"><span>240 x 350</span></div>
+          <div class="popup-banner__item"><span>240 x 350</span></div>
+          <div class="popup-banner__item"><span>240 x 350</span></div>
+        </div>
+        <div class="popup-banner__descr">Карточка акция/промокод. Фиксированный размер 240x350.</div>
+      </div>
+    </div>
+  </div>
+  <script src="dist/js/jquery.min.js"></script>
+  <script src="dist/owl-carousel/owl.carousel.min.js"></script>
+  <script src="dist/fancybox/fancybox.umd.js"></script>
+  <script src="./dist/js/main.js?v=256"></script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
+  <link rel="stylesheet" href="./dist/css/main.css">
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="user-home.html">
+            <img src="./dist/img/logo.svg" alt="logo">
+          </a>
+          <div class="header__search">
+            <input type="text" class="form-control" placeholder="Например: Сбермаркет" id="search-input">
+            <div id="search-reset"><span class="icon icon-cancel"></span></div>
+            <div id="search-list">
+              <ul class="search-list__inner">
+                <li class="search-list__item">
+                  <a href="user-shop.html">
+                    <span class="search-list__item-name"><strong>Сбер</strong>маркет</span>
+                    <span class="search-list__item-type">Магазин</span>
+                  </a>
+                </li>
+                <li class="search-list__item">
+                  <a href="user-category.html">
+                    <span class="search-list__item-name"><strong>Сбер</strong>продукты</span>
+                    <span class="search-list__item-type">Категория</span>
+                  </a>
+                </li>
+                <li class="search-list__item">
+                  <a href="user-category.html">
+                    <span class="search-list__item-name"><strong>Сбер</strong>МегаМаркет</span>
+                    <span class="search-list__item-type">Категория</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__account">
+            <div class="header__account-inner">
+              <div class="header__account-visible">
+                <div class="header__account-img avatar ">
+                  <img src="./dist/img/user-icon.png" alt="avatar" aria-label="presentation">
+                </div>
+                <span class="header__account-text">Войти</span>
+              </div>
+              <div class="header__account-hidden">
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="#" class="menu-link" data-src="#popup-login" data-fancybox="popup-rounded-login">
+                      <span class="menu-link__text">Войти</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link" data-src="#popup-register" data-fancybox="popup-rounded-register">
+                      <span class="menu-link__text">Зарегистрироваться</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button id="burger" data-fancybox="menu" data-src="#menu-mobile"><span></span><span></span><span></span></button>
+          <div id="menu-mobile">
+            <div class="menu-mobile__inner">
+              <div class="menu-section menu-section--mobile">
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="/" class="menu-link">
+                      <span class="menu-link__text">Главная</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="user-categories.html" class="menu-link">
+                      <span class="menu-link__text">Категории</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="user-shops.html" class="menu-link">
+                      <span class="menu-link__text">Магазины</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">О проекте</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">
+                      <span class="menu-link__text">Рекламодателям</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="page-heading">
+      <div class="container">
+        <div class="page-heading__inner">
+          <h1 class="page-heading__title">Ссылки</h1>
+          <p class="page-heading__subtitle">Ссылки на верстку основных страниц сайта</p>
+        </div>
+        <hr>
+      </div>
+    </section>
+    <main>
+      <div class="container">
+        <h3 class="section-title"><a href="admin-materials.html">Админка</a></h3>
+        <h3 class="section-title"><a href="user-home.html">Пользовательская часть</a></h3>
+      </div>
+    </main>
+    <style>
+      .menu-layout {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .menu-section+.menu-section {
+        margin-top: 0;
+        margin-left: 30px;
+      }
+    </style>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__copyright">По скидосу © 2022</p>
+          <div class="footer__links">
+            <a href="#" class="footer__link" target="_blank">Рекламодателям</a>
+            <a href="#" class="footer__link" target="_blank">О проекте</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./dist/js/main.js"></script>
+</body>
+
+</html>

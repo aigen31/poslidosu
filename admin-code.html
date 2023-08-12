@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
+  <link rel="stylesheet" href="dist/codemirror/codemirror.css">
+  <link rel="stylesheet" href="dist/codemirror/theme/dracula.css">
+  <link rel="stylesheet" href="dist/fancybox/fancybox.css">
+  <link rel="stylesheet" href="./dist/css/main.css?v=259">
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="admin-shops.html">
+            <img src="./dist/img/logo.svg" alt="logo">
+          </a>
+          <div class="header__search">
+            <input type="text" class="form-control" placeholder="Например: Сбермаркет" id="search-input">
+            <div id="search-reset"><span class="icon icon-cancel"></span></div>
+            <div id="search-list">
+              <ul class="search-list__inner">
+                <li class="search-list__item">
+                  <a href="user-shop.html">
+                    <span class="search-list__item-name"><strong>Сбер</strong>маркет</span>
+                    <span class="search-list__item-type">Магазин</span>
+                  </a>
+                </li>
+                <li class="search-list__item">
+                  <a href="user-category.html">
+                    <span class="search-list__item-name"><strong>Сбер</strong>продукты</span>
+                    <span class="search-list__item-type">Категория</span>
+                  </a>
+                </li>
+                <li class="search-list__item">
+                  <a href="user-category.html">
+                    <span class="search-list__item-name"><strong>Сбер</strong>МегаМаркет</span>
+                    <span class="search-list__item-type">Категория</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__account">
+            <div class="header__account-inner">
+              <div class="header__account-visible">
+                <div class="header__account-img avatar avatar--pink">
+                  <img src="./dist/img/user-icon.png" alt="avatar" aria-label="presentation">
+                </div>
+                <span class="header__account-text"><u>ID 5435</u></span>
+              </div>
+              <div class="header__account-hidden">
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="admin-profile.html" class="menu-link">
+                      <span class="menu-link__text">Мой профиль</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-profile.html" class="menu-link">
+                      <span class="menu-link__text">Выйти</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button id="burger" data-fancybox="menu" data-src="#menu-mobile">
+            <span class="burger__inner"></span>
+          </button>
+          <div id="menu-mobile">
+            <div class="menu-mobile__inner">
+              <div class="menu-section">
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="user-home.html" class="menu-link">
+                      <span class="menu-link__text">Главная</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="user-categories.html" class="menu-link">
+                      <span class="menu-link__text">Категории</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="user-shops.html" class="menu-link">
+                      <span class="menu-link__text">Магазины</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link" data-src="#popup-contacts" data-fancybox="popup-rounded-contacts-menu">
+                      <span class="menu-link__text">О проекте</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link" data-src="#popup-b2b" data-fancybox="popup-rounded-b2b-menu">
+                      <span class="menu-link__text">Рекламодателям</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page-heading">
+        <div class="container">
+          <div class="page-heading__inner">
+            <h1 class="page-heading__title">Панель управления</h1>
+            <p class="page-heading__subtitle">На этой странице можно добавить материал, страницы, и выполнить другие административные действия с сайтом.</p>
+          </div>
+          <hr>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row">
+          <!-- .main start -->
+          <div class="main">
+            <h2 class="section-title">Редактор кода</h2>
+            <div class="content">
+              <form action="#">
+                <div class="form-head">
+                  <div class="form-row">
+                    <div class="form-col-6  ">
+                      <label class="form-label" for="page">Страница</label>
+                      <select class="form-select" name="page" id="page">
+                        <option selected value="0">page.php</option>
+                        <option value="1">settings.php</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-col">
+                    <textarea id="code" name="code">
+<?php
+$a = array('a' => 1, 'b' => 2, 3 => 'c');
+
+echo "$a[a] ${a[3] /* } comment */} {$a[b]} \$a[a]";
+
+function hello($who) {
+    return "Hello $who!";
+}
+?>
+<p>The program says <?= hello("World") ?>.</p>
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Adipisci consectetur cum debitis laborum natus odio, quia repellendus sed.
+    Commodi corporis doloremque eaque explicabo facilis
+    molestias odit quas quibusdam temporibus voluptatem?
+</p>
+<script>
+    alert("And here is some JS code"); // also colored
+</script>
+</textarea>
+                  </div>
+                </div>
+                <div class="entity__footer">
+                  <div class="entity__footer-buttons">
+                    <button class="btn btn-purple-outline">сохранить изменения</button>
+                    <button class="btn btn-transparent">отменить изменения</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- .main end -->
+          <!-- sidebar start -->
+          <aside class="sidebar">
+            <nav class="sidebar-menu">
+              <div class="menu-section">
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="admin-add.html" class="menu-link">
+                      <span class="menu-link__text">Добавить материал</span>
+                      <span class="icon icon-plus-circle"></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-section">
+                <p class="menu-section__title">Материалы</p>
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="admin-materials.html" class="menu-link">
+                      <span class="menu-link__text">На модерации</span>
+                      <span class="menu-link__count  menu-link__count--colored ">52</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <span class="menu-link menu-link--active">
+                      <span class="menu-link__text">Опубликовано</span>
+                      <span class="menu-link__count ">1552</span>
+                    </span>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-materials.html" class="menu-link">
+                      <span class="menu-link__text">Снято с публикации</span>
+                      <span class="menu-link__count ">5555</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-section">
+                <p class="menu-section__title">Пользователи</p>
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="admin-users.html" class="menu-link">
+                      <span class="menu-link__text">Пользователи</span>
+                      <span class="menu-link__count ">525553</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-users.html" class="menu-link">
+                      <span class="menu-link__text">Модераторы</span>
+                      <span class="menu-link__count ">10</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-users.html" class="menu-link">
+                      <span class="menu-link__text">Администраторы</span>
+                      <span class="menu-link__count ">2</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-section">
+                <p class="menu-section__title">Страницы</p>
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="admin-categories.html" class="menu-link">
+                      <span class="menu-link__text">Категории</span>
+                      <span class="menu-link__count ">21</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-shops.html" class="menu-link">
+                      <span class="menu-link__text">Магазины</span>
+                      <span class="menu-link__count ">1310</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-pages.html" class="menu-link">
+                      <span class="menu-link__text">Страницы</span>
+                      <span class="menu-link__count ">3</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-banners.html" class="menu-link">
+                      <span class="menu-link__text">Баннеры</span>
+                      <span class="menu-link__count ">4</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-section">
+                <ul class="menu-list">
+                  <li class="menu-item">
+                    <a href="admin-code.html" class="menu-link">
+                      <span class="menu-link__text">Редактор кода</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-profile.html" class="menu-link">
+                      <span class="menu-link__text">Настройки профиля</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="admin-settings.html" class="menu-link">
+                      <span class="menu-link__text">Настройки сайта</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </aside>
+          <!-- sidebar end -->
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__copyright">По скидосу © 2022</p>
+          <div class="footer__links">
+            <a href="#" class="footer__link" data-src="#popup-b2b" data-fancybox="popup-rounded-b2b">Рекламодателям</a>
+            <a href="#" class="footer__link" data-src="#popup-contacts" data-fancybox="popup-rounded-contacts">О проекте</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div id="popup-terms" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Условия использования</div>
+    </div>
+    <div class="popup-content">
+      <div class="popup-text" id="popup-terms-description">
+      </div>
+      <div class="popup-buttons" id="popup-terms-buttons">
+      </div>
+    </div>
+  </div>
+  <div id="popup-login" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Авторизация</div>
+      <div class="popup-title-row popup-title-row--2">Войдите в свою учётную запись для управления подписками и своими промоакциями</div>
+    </div>
+    <div class="popup-content">
+      <form action="">
+        <div class="form-row">
+          <div class="form-col">
+            <input type="text" class="form-control" name="email" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <input type="password" class="form-control" name="email" placeholder="Пароль">
+          </div>
+        </div>
+        <div class="popup-buttons">
+          <button href="#" class="btn">войти на сайт</button>
+          <a href="#" class="btn btn-transparent fancy-close" data-fancybox="popup-rounded-forgot" data-src="#popup-forgot">забыли пароль?</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="popup-register" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Регистрация</div>
+      <div class="popup-title-row popup-title-row--2">Регистрация на сайте позволит публиковать промокоды и акции на сайт, а также управлять рассылкой</div>
+    </div>
+    <div class="popup-content">
+      <form action="">
+        <div class="form-row">
+          <div class="form-col">
+            <input type="text" class="form-control" name="login" placeholder="Имя пользователя">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <input type="text" class="form-control" name="email" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <input type="password" class="form-control" name="email" placeholder="Пароль">
+          </div>
+        </div>
+        <div class="popup-buttons">
+          <button class="btn">зарегистрироваться</button>
+          <a href="#" class="btn btn-transparent fancy-close" data-fancybox="popup-rounded-login-register" data-src="#popup-login">войти</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="popup-forgot" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Восстановление пароля</div>
+      <div class="popup-title-row popup-title-row--2">Введите свой e-mail и мы вышлем новый автоматически сгенерированный пароль</div>
+    </div>
+    <div class="popup-content">
+      <form action="">
+        <div class="form-row">
+          <div class="form-col">
+            <input type="password" class="form-control" name="email" placeholder="Пароль">
+          </div>
+        </div>
+        <div class="popup-buttons">
+          <button class="btn">выслать пароль</button>
+          <a href="#" class="btn btn-transparent fancy-close" data-fancybox="popup-rounded-login-forgot" data-src="#popup-login">войти</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="popup-contacts" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Контакты</div>
+      <div class="popup-title-row popup-title-row--2">Хотите сообщить об ошибках в работе сайта, неактуальных спецпредложениях или поделиться пожеланиями? Свяжитесь с нами любым из представленных ниже способов.</div>
+    </div>
+    <div class="popup-content">
+      <div class="popup-contacts-list">
+        <ul>
+          <li>
+            <a href="https://instagram.com/poskidosu" class="stretched-link">
+              <img src="dist/img/instagram.png" alt=""> instagram.com/poskidosu </a>
+            <span class="icon-arrow-right"></span>
+          </li>
+          <li>
+            <a href="https://t.me/poskidosu" class="stretched-link" target="_blank">
+              <img src="dist/img/telegram.png" alt=""> t.me/poskidosu </a>
+            <span class="icon-arrow-right"></span>
+          </li>
+          <li>
+            <a href="https://vk.com/poskidosu" class="stretched-link" target="_blank">
+              <img src="dist/img/vk.png" alt=""> vk.com/poskidosu </a>
+            <span class="icon-arrow-right"></span>
+          </li>
+          <li>
+            <a href="mailto:support@poskidosu.ru" class="stretched-link">
+              <img src="dist/img/mail.png" alt=""> support@poskidosu.ru </a>
+            <span class="icon-arrow-right"></span>
+          </li>
+        </ul>
+      </div>
+      <div class="popup-team">
+        <div class="popup-team-title">Наша команда</div>
+        <div class="popup-team-list">
+          <div class="popup-team-item">
+            <div class="popup-team-item__img">
+              <img src="dist/img/team-1.png" alt="">
+            </div>
+            <div class="popup-team-item__name">Dmitry Tzar <span>Основатель</span></div>
+            <div class="popup-team-item__info">Веду блог о бизнесе, жизни, путешествиях</div>
+            <div class="popup-team-item__links">
+              <a href="https://t.me/poskidosu" target="_blank">
+                <img src="dist/img/telegram.png" alt="">
+              </a>
+              <a href="https://instagram.com/poskidosu" target="_blank">
+                <img src="dist/img/instagram.png" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="popup-team-item">
+            <div class="popup-team-item__img">
+              <img src="dist/img/team-2.png" alt="">
+            </div>
+            <div class="popup-team-item__name">Victoria Ogai <span>Дизайн-консультант</span></div>
+            <div class="popup-team-item__info">Моменты из жизни и дизайн</div>
+            <div class="popup-team-item__links">
+              <a href="https://t.me/poskidosu" target="_blank">
+                <img src="dist/img/telegram.png" alt="">
+              </a>
+              <a href="https://instagram.com/poskidosu" target="_blank">
+                <img src="dist/img/instagram.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popup-b2b" style="display:none;">
+    <div class="popup-title">
+      <div class="popup-title-row popup-title-row--1">Рекламодателям</div>
+      <div class="popup-title-row popup-title-row--2">Наша площадка предлагает различные варианты рекламных интеграций, которыми вы можете воспользоваться. Ниже приведены примеры.</div>
+    </div>
+    <div class="popup-content">
+      <div class="popup-banner">
+        <div class="popup-banner__title">HTML5 баннер</div>
+        <div class="popup-banner__list">
+          <div class="popup-banner__item popup-banner__item--wide"><span>1120 x 90</span></div>
+        </div>
+        <div class="popup-banner__descr">Адаптивный HTML5 баннер. Максиальные размеры 1120x90.</div>
+        <div class="popup-banner__title">Блок Акция/Промокод</div>
+        <div class="popup-banner__list">
+          <div class="popup-banner__item popup-banner__item--active"><span>240 x 350</span></div>
+          <div class="popup-banner__item"><span>240 x 350</span></div>
+          <div class="popup-banner__item"><span>240 x 350</span></div>
+        </div>
+        <div class="popup-banner__descr">Карточка акция/промокод. Фиксированный размер 240x350.</div>
+      </div>
+    </div>
+  </div>
+  <link rel="stylesheet" href="dist/codemirror/codemirror.css">
+  <link rel="stylesheet" href="dist/codemirror/theme/dracula.css">
+  <script src="dist/codemirror/codemirror.js"></script>
+  <script src="dist/codemirror/mode/php/php.js"></script>
+  <script src="dist/codemirror/addon/edit/matchbrackets.js"></script>
+  <script src="dist/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+  <script src="dist/codemirror/mode/xml/xml.js"></script>
+  <script src="dist/codemirror/mode/javascript/javascript.js"></script>
+  <script src="dist/codemirror/mode/css/css.js"></script>
+  <script src="dist/codemirror/mode/clike/clike.js"></script>
+  <script src="dist/js/jquery.min.js"></script>
+  <script src="dist/owl-carousel/owl.carousel.min.js"></script>
+  <script src="dist/fancybox/fancybox.umd.js"></script>
+  <script src="./dist/js/main.js?v=256"></script>
+</body>
+
+</html>
